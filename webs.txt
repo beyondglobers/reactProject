@@ -1,0 +1,121 @@
+https://github.com/accimeesterlin/mernapp_youtube
+https://github.com/accimeesterlin/mernapp_youtube/blob/master/routes/api.js
+https://github.com/accimeesterlin/mernapp_youtube/blob/master/models/blogPost.js
+https://github.com/accimeesterlin/mernapp_youtube/blob/master/server.js
+
+https://reactjs.org/docs/state-and-lifecycle.html
+
+https://www.npmjs.com/package/nodemon
+https://www.npmjs.com/package/concurrently#usage
+https://www.npmjs.com/package/cors
+
+
+https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4
+
+
+////////////////////////////////////////////////////
+How to render one component in another component in React JS?
+https://www.golangprograms.com/how-to-render-one-component-in-another-component-in-react-js.html
+
+
+
+how to use react-router
+https://www.freecodecamp.org/news/react-router-tutorial/
+https://stackoverflow.com/questions/34607841/react-router-nav-bar-example
+
+
+how to use react-router-dom
+https://v5.reactrouter.com/web/guides/quick-start
+how to use react-router-dom updated
+https://stackoverflow.com/questions/63124161/attempted-import-error-switch-is-not-exported-from-react-router-dom?rq=1
+
+
+React: How to show a different component on click
+https://flaviocopes.com/react-show-different-component-on-click/
+
+
+bootstrap con react 
+https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/
+
+
+react-bootstrap library
+https://react-bootstrap.github.io/getting-started/introduction/
+How to Use Bootstrap Carousel in React
+https://dzone.com/articles/how-to-use-bootstrap-carousel-in-reactjs
+
+
+Layout Component and why we use it in React
+https://dev.to/olenadrugalya/layout-component-and-why-we-use-it-in-react-d8b
+Design Page Layout and Styling in React Application — Part 3
+https://medium.com/@nutanbhogendrasharma/design-page-layout-and-styling-in-react-application-part-3-448d70263f70
+
+
+bootstrap navigation bars 
+https://www.codeply.com/go/kTGlK9Axdk
+padding and margin navbar items
+https://stackoverflow.com/questions/48068539/how-to-add-space-inbetween-nav-items-in-bootstrap
+
+
+responsible table 
+https://www.w3schools.com/bootstrap/bootstrap_tables.asp
+
+
+Declarative routing for React
+https://bestofreactjs.com/repo/ReactTraining-react-router-react-code-design
+
+
+A guide to using React Router v6 in React apps
+https://blog.logrocket.com/react-router-v6/
+
+
+////
+react-router-dom routes with parameters
+https://ui.dev/react-router-url-parameters/
+https://www.better.dev/route-parameters-with-react-router
+////
+
+
+////
+react-router-dom useParams() inside class component
+https://stackoverflow.com/questions/58548767/react-router-dom-useparams-inside-class-component
+////
+
+
+Props vs State
+https://reactjs.org/docs/faq-state.html
+https://github.com/uberVU/react-guide/blob/master/props-vs-state.md
+
+
+select-option handler (dropdown menu)
+https://blog.hubspot.com/website/html-dropdown
+https://stackoverflow.com/questions/59636806/react-router-link-in-select-option
+//////https://stackoverflow.com/questions/28868071/onchange-event-using-react-js-for-drop-down//////
+
+
+schema in one mongoose to another mongoose model
+https://stackoverflow.com/questions/19474712/mongoose-and-multiple-database-in-single-node-js-project
+
+
+
+//// ajax directamente en react 
+FormData
+https://developer.mozilla.org/en-US/docs/Web/API/FormData
+Using FormData Objects
+https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects#submitting_forms_and_uploading_files_via_ajax_without_formdata_objects
+Using XMLHttpRequest
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+////
+
+File uploading in React.js
+https://www.geeksforgeeks.org/file-uploading-in-react-js/
+
+
+//// auth0
+https://developer.okta.com/blog/2019/03/06/simple-user-authentication-in-react
+https://auth0.com/blog/complete-guide-to-react-user-authentication/
+https://dev.to/terrierscript/example-for-auth0-and-react-hooks-41e4
+https://blog.bitsrc.io/6-reasons-to-use-react-hooks-instead-of-classes-7e3ee745fe04
+
+
+
+
