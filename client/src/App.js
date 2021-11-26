@@ -58,6 +58,7 @@ import Update from './components/Update';
 import Upload from './components/Upload';
 import Category from './components/Category';
 import Prueba from './components/Prueba';
+import Profile from './components/Profile';
 
 import Layout from "./components/layouts/layouts";
 import PrivateRoute from './components/PrivateRoute';
@@ -80,30 +81,33 @@ export default class App extends React.Component {
 
 
       <div class="justify-content-center">
-        <Layout>
+        <Router>
+          <Layout>
 
-            <Router>
-              <div>
+            {/* <Router> */}
+            <div>
               <Prueba />
-                <Routes>
-                  {/* <Route exact path="/table" element={<Table />} /> */}
-                  <Route exact path='/table/:db' element={<Table/>} />
+              <Routes>
+                {/* <Route exact path="/table" element={<Table />} /> */}
+                <Route exact path='/table/:db' element={<Table />} />
 
-                  <Route exact path="/add" element={<Add />} />
-                  {/* <PrivateRoute path="/add" component={<Add/>} /> */}
-                  {/* <Route exact path='/updateone' element={<Add/>} /> */}
-                  <Route exact path='/updateone/:id' element={<Update/>} />
-                  <Route exact path='/upload' element={<Upload/>} />
+                <Route exact path="/add" element={<Add />} />
+                {/* <PrivateRoute path="/add" component={<Add/>} /> */}
+                {/* <Route exact path='/updateone' element={<Add/>} /> */}
+                <Route exact path='/updateone/:id' element={<Update />} />
+                <Route exact path='/upload' element={<Upload />} />
+                <Route exact path='/profile' element={<Profile />} />
 
-                  <Route exact path='/category/:category' element={<Category/>} />
+                <Route exact path='/category/:category' element={<Category />} />
 
-                  {/* <Route exact path='/remove' element={<Update/>} /> */}
-                  {/* <Route component={Page404} /> */}
-                </Routes>
-              </div>
-            </Router>
+                {/* <Route exact path='/remove' element={<Update/>} /> */}
+                {/* <Route component={Page404} /> */}
+              </Routes>
+            </div>
+            {/* </Router> */}
 
-        </Layout>
+          </Layout>
+        </Router>
       </div>
 
 

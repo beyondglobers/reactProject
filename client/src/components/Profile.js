@@ -1,57 +1,30 @@
-// https://auth0.com/docs/quickstart/spa/react/02-calling-an-api
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Nav } from 'react-bootstrap';
 
 const Profile = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
 
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
-  const [userMetadata, setUserMetadata] = useState(null);
-
-  if (isAuthenticated) {
-
-    return (
-
-      <>
-
-        <Nav.Link href="/table/stocks">Stock</Nav.Link>
-        <Nav.Link href="/add">Agregar</Nav.Link>
-        <Nav.Link href="/upload">Cargar</Nav.Link>
-
-      </>);
-
-  }
-  else {
-
-    return (
-
-      <>
-
-        <Nav.Link href="/table/stocks"></Nav.Link>
-        <Nav.Link href="/add"></Nav.Link>
-        <Nav.Link href="/upload"></Nav.Link>
-
-      </>);
+  if (isLoading) {
+    return <div>Loading ...</div>;
   }
 
-  // return (
+  return (
+    isAuthenticated && (
 
-  //   isAuthenticated && (
+      <div class="row justify-content-center mb-5 mt-5" >
 
-  //     <div>
+        <div class="col-auto">
 
-  //       <Nav.Link href="/table/stocks">Stock</Nav.Link>
-  //       <Nav.Link href="/add">Agregar</Nav.Link>
-  //       <Nav.Link href="/upload">Cargar</Nav.Link>
+          {/* <div> */}
+          <img src={user.picture} alt={user.name} />
+          <h2>{user.name}</h2>
+          <p>{user.email}</p>
 
-  //     </div>
-  //   )
+        </div>
+      </div>
 
-
-  // );
+    )
+  );
 };
 
-export {
-  Profile
-}
+export default Profile;

@@ -116,7 +116,7 @@ class Add extends Component {
         <div class="col-auto">
           {/* <h2>Agregar</h2> */}
 
-          <div class="d-flex justify-content-center bg-light">
+          <div class="d-flex justify-content-center">
             <h2>Agregar</h2>
           </div>
 

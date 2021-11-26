@@ -70,7 +70,7 @@ router.post('/save', (req, res) => {
 
     // const newStock = new stock(data);
 
-    stock.updateOne({'my_id':data.my_id}, {$set: data}, {upsert: true}, (error) => {
+    stock.updateOne({ 'my_id': data.my_id }, { $set: data }, { upsert: true }, (error) => {
         if (error) {
             res.status(500).json({ msg: 'Sorry, internal server errors' });
             return;
@@ -104,11 +104,13 @@ router.post('/update', (req, res) => {
     //     });
     // });
 
-    packageData = { category: data.category, desactualizar: data.desactualizar, name: data.name, photo_id: data.photo_id};
+    packageData = { category: data.category, desactualizar: data.desactualizar, name: data.name, photo_id: data.photo_id };
     stock.findOneAndUpdate({ 'my_id': data.my_id },
-        {$set: packageData,
-        $inc: { 'amount': data.amount }, 
-        upsert: true},
+        {
+            $set: packageData,
+            $inc: { 'amount': data.amount },
+            upsert: true
+        },
         function (err, response) {
             if (err) {
                 res.status(500).json({ msg: 'Sorry, internal server errors' });
@@ -486,6 +488,14 @@ router.get('/getoneCategory', (req, res) => {
 router.get('/dbsList', (req, res) => {
 
     console.log('/dbsList');
+
+    let connection = mongoose2.connection;
+    Object.keys(connection.models).forEach((collection) => {
+        // You can get the string name.
+        console.info(collection);
+        // Or you can do something else with the model.
+        //   connection.models[collection].remove({});
+    });
 
     mongoose2.connection.db.listCollections().toArray(function (err, names) {
 

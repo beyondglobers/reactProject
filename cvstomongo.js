@@ -74,7 +74,7 @@ csvtojson()
               { "my_id": this_id },
               {
                 $set: {  "name": doc1.name, "category": doc1.category, "photo_id": doc1.photo_id, "desactualizar": doc1.desactualizar },
-                $inc: { "amount": Number(doc1.amount)},
+                $inc: { "amount": Number(doc1.amount),"ventas": Number(0)},
                 $currentDate: { lastModified: true },             
               },
               { upsert: true });

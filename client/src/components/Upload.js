@@ -123,21 +123,24 @@ class Upload extends Component {
     return (
 
       ///////////////////
-      <div>
+      <>
+      <div class="row justify-content-center" >
 
         {/* <div>
           <h1>File upload For...able </h1>
           <input type="file" name="file1" multiple onChange={this.uploadFileF} />
         </div> */}
 
-        <div>
+        <div class="col-auto">
           {/* <h1>File upload Multer </h1> */}
           <h1>Upload File  </h1>
           <input type="file" name="file1" multiple onChange={this.uploadFileM} />
         </div>
 
-      </div>
+      </div >
+      </>
 
+      // {/* </div> */ }
       ///////////////////
 
       /////////////////////

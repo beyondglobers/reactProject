@@ -291,6 +291,23 @@
     padding: 10px;
 }
 
+.totalblack{
+  /* width: 14.7%; */
+  /* height: 270px; */
+  background-color: #000000;
+  color: red;
+  text-align: center;
+  /* opacity: 0.5; */
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+  /* bottom: 0; */
+}
+
+.carousel {
+  margin: 0;
+}
+
 
 
 

@@ -6,6 +6,10 @@ const Schema = mongoose.Schema;
 const stockSchema = new Schema({
 	my_id: String,
 	amount: Number,
+	ventas: {
+		type:Number,
+		default: 0
+	},
 	category: String,
 	desactualizar: String,
 	lastModified: {

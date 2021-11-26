@@ -21,7 +21,11 @@ import { Row, Col } from 'react-bootstrap';
 
 // const imgDir = path.join(IMAGES_FILES_DIR ,"hogar4.jpg");
 
-import img1 from "../images/hogar4.jpg";
+import img1 from "../images/none.jpg";
+
+// import Image from "./Image";
+
+import { Img } from 'react-image';
 
 class Category extends Component {
 
@@ -217,6 +221,10 @@ class Category extends Component {
     }
   };
 
+  addDefaultSrc = (ev) => {
+    ev.target.src = '../images/none.jpg'
+  }
+
   displayCatProducts = (products) => {
 
     if (!products.length) {
@@ -240,37 +248,11 @@ class Category extends Component {
         <Col>
           <Card style={{ width: '15rem', height: '18rem' }} key={index}>
 
-            {/* <picture>
-              <source id="s1" srcset="image1_not_supported_by_browser.webp" type="image/webp">
-                <source id="s2" srcset="image2_broken_link.png" type="image/png">
-                  <img src="image3_fallback.jpg" alt="" onerror="this.onerror=null;document.getElementById('s1').srcset=document.getElementById('s2').srcset=this.src;"/>
-                  </picture> */}
 
-
-
-            <img src={`../images/${product.photo_id}`} alt="Imagen Producto" class="cardImage"
+            <Img
+              src={[`../images/${product.photo_id}`, img1]}
+              class="cardImage"
             />
-
-            {/* onError={(e) => {
-              if (e.target.src !== "../images/none.jpg") { e.target.src = "../images/none.jpg"; }
-            }} */}
-
-            {/* https://stackoverflow.com/questions/48259512/how-to-check-if-a-pariticular-fileexists-in-reactjs/48264153 */}
-
-            {/* <img src = {this.tryRequire(`../images/${product.photo_id}`)} alt={product.name} class="cardImage" /> */}
-
-            {/* <img src={`../images/${product.photo_id}`} alt="Imagen Producto" class="cardImage"
-                  onError={e => { 
-                    if(this.state.imageLoadError) { 
-                        this.setState({
-                            imageLoadError: false
-                        });
-                        e.target.src = '../images/none.jpg';
-                    }
-                }} /> */}
-
-            {/* <img src={`../images/${product.photo_id}`} alt="Imagen Producto" class="cardImage"
-                     /> */}
 
 
             <Card.Body>
@@ -292,20 +274,32 @@ class Category extends Component {
 
 
     console.log('State: ', this.state);
-
+    let errorflag = true;
 
 
     //JSX
     return (
-      <div>
-        <h1>{this.state.category}</h1>
-        <Row xs={1} md={4} className="g-4">
 
-          {this.displayCatProducts(this.state.products)}
 
-        </Row>
+      <div class="row pb-3" >
+
+        <div class="col">
+
+          <div class="text-center">
+            <h1>{this.state.category}</h1>
+          </div>
+
+          {/* <div class="col"> */}
+
+          <Row xs={1} md={4} className="g-4">
+
+            {this.displayCatProducts(this.state.products)}
+
+          </Row>
+        </div>
 
       </div>
+
 
       // <div class="container justify-content-center">
 
