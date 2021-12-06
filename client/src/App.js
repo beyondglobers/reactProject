@@ -62,6 +62,7 @@ import Profile from './components/Profile';
 
 import Layout from "./components/layouts/layouts";
 import PrivateRoute from './components/PrivateRoute';
+import Carrito from "./components/Carrito"; 
 
 export default class App extends React.Component {
   render() {
@@ -99,6 +100,7 @@ export default class App extends React.Component {
                 <Route exact path='/profile' element={<Profile />} />
 
                 <Route exact path='/category/:category' element={<Category />} />
+                <Route exact path='/carrito' element={<Carrito />} />
 
                 {/* <Route exact path='/remove' element={<Update/>} /> */}
                 {/* <Route component={Page404} /> */}

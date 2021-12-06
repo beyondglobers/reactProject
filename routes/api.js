@@ -6,11 +6,22 @@ const router = express.Router();
 
 // const stock = require('../models/stock');
 
+//
+var constants = require('../constants');
+const UPLOAD_FILES_DIR = constants.UPLOAD_FILES_DIR;
+const IMAGES_FILES_DIR = constants.IMAGES_FILES_DIR;
+const mongodburl = constants.mongodburl;
+// const mongooseurl = 'mongodb://localhost:27017/stockUpdate2';
+
 var mongo = require('mongodb').MongoClient;
-var url = 'mongodb://localhost:27017';
+// var url = 'mongodb://localhost:27017';
+
+var url = mongodburl;
+// var url = 'mongodb://localhost:27017/stockUpdate2';
 
 const mongoose2 = require('mongoose');
-mongoose2.connect('mongodb://localhost:27017/stockUpdate2', { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose2.connect('mongodb://localhost:27017/stockUpdate2', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose2.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const stockSchema = require('../models/stock');
 const stock = mongoose2.model('stock', stockSchema);
@@ -30,11 +41,6 @@ const extract = require('extract-zip');
 // constants
 // var constants = require(path.join(path.resolve(__dirname, '..'),'constants'));
 const saveDB = require('../cvstomongo');
-var constants = require('../constants');
-//
-
-const UPLOAD_FILES_DIR = constants.UPLOAD_FILES_DIR;
-const IMAGES_FILES_DIR = constants.IMAGES_FILES_DIR;
 
 /////
 
@@ -139,6 +145,7 @@ router.post('/update', (req, res) => {
 
 // }
 
+/* /////// */
 // function checkCreateUploadsFolder(uploadsFolder) {
 //     try {
 //         fs.statAsync(uploadsFolder)
@@ -164,6 +171,7 @@ router.post('/update', (req, res) => {
 // }
 
 // Returns true or false depending on whether the file is an accepted type
+
 function checkAcceptedExtensions(file) {
     try {
         const type = file.type.split('/').pop()
@@ -406,6 +414,8 @@ router.get('/getoneDB', (req, res) => {
 
 
     mongo.connect(url, function (err, client) {
+        // mongo.connect(mongodburl, function (err, client) {
+
 
         if (err) throw err;
 
@@ -489,6 +499,7 @@ router.get('/dbsList', (req, res) => {
 
     console.log('/dbsList');
 
+    // https://www.py4u.net/discuss/1467985
     let connection = mongoose2.connection;
     Object.keys(connection.models).forEach((collection) => {
         // You can get the string name.

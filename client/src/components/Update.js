@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 // import { useLocation, useParams } from 'react-router-dom';
-import {useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // const { state } = this.props.location;
 
@@ -17,7 +17,7 @@ import {useParams } from 'react-router-dom';
 
 class Update extends Component {
 
-  
+
   state = {
     my_id: '',
     amount: '',
@@ -25,7 +25,8 @@ class Update extends Component {
     desactualizar: '',
     name: '',
     photo_id: '',
-    posts: []
+    clear: ''
+
   };
 
   componentDidMount = () => {
@@ -74,13 +75,13 @@ class Update extends Component {
       params: {
         // product: this.state.my_id,
         id: this.state.my_id
-        
+
       }
     })
       .then((response) => {
         const data = response.data;
         this.setUserInputs(data);
-        this.setState({ posts: data }); // se puede prescindir de esta linea
+        // this.setState({ posts: data }); // se puede prescindir de esta linea
         console.log('Data has been received!!');
       })
       .catch(() => {
@@ -109,7 +110,7 @@ class Update extends Component {
       // body: this.state.body
 
       my_id: this.state.my_id,
-      amount: this.state.amount,
+      amount: this.state.clear,
       category: this.state.category,
       desactualizar: this.state.desactualizar,
       name: this.state.name,
@@ -127,12 +128,15 @@ class Update extends Component {
         console.log('Data has been sent to the server');
         // this.resetUserInputs();
         this.getOne();
-        
+
         // this.getBlogPost();
       })
       .catch(() => {
         console.log('Internal server error');
-      });;
+      });
+
+    this.setState({ clear: '' });
+
   };
 
   setUserInputs = (inputs) => {
@@ -210,13 +214,14 @@ class Update extends Component {
             {/* // amount */}
             <div className="form-input">
 
-              amount:
+              {(this.state.amount)} unds, agregar:
               <div>
                 <input
                   type="text"
-                  name="amount"
+                  name="clear"
                   placeholder="Cantidad"
-                  value={this.state.amount}
+                  value={this.state.clear}
+                  // value = {0}
                   onChange={this.handleChange}
                 />
               </div>
@@ -282,7 +287,11 @@ class Update extends Component {
               </div>
             </div>
 
-            <button>Submit</button>
+            <div>
+            <br></br>
+              <button>Submit</button>
+            </div>
+
           </form>
 
         </div>
@@ -296,8 +305,8 @@ class Update extends Component {
 
 export default (props) => (
   <Update
-      {...props}
-      params={useParams()}
+    {...props}
+    params={useParams()}
   />
 );
 

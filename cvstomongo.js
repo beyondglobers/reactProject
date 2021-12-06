@@ -4,7 +4,9 @@ const mongodb = require("mongodb").MongoClient;
 const csvtojson = require("csvtojson");
 const path = require("path");
 // let url = "mongodb://username:password@localhost:27017/";
-const url = "mongodb://localhost:27017/";
+
+
+// const url = "mongodb://localhost:27017/";
 
 
 // constants
@@ -13,6 +15,11 @@ var constants = require('./constants');
 
 const UPLOAD_FILES_DIR = constants.UPLOAD_FILES_DIR;
 const IMAGES_FILES_DIR = constants.IMAGES_FILES_DIR;
+const mongodburl = constants.mongodburl;
+
+const url = mongodburl;
+// var url = 'mongodb://localhost:27017/stockUpdate2';
+
 
 /////
 

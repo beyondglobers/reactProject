@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
 const path = require('path');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 
 
 const app = express();
@@ -17,6 +17,10 @@ var constants = require('./constants');
 
 const UPLOAD_FILES_DIR = constants.UPLOAD_FILES_DIR;
 const IMAGES_FILES_DIR = constants.IMAGES_FILES_DIR;
+const mongodburl = constants.mongodburl;
+
+var url = mongodburl;
+// var url = 'mongodb://localhost:27017/stockUpdate2';
 
 if (!fs.existsSync(UPLOAD_FILES_DIR)) {    //check if folder already exists
   console.log(UPLOAD_FILES_DIR, " does't exist");
@@ -28,18 +32,20 @@ if (!fs.existsSync(IMAGES_FILES_DIR)) {    //check if folder already exists
 }
 
 
-function checkCreateUploadsFolder(uploadsFolder) {
+// function checkCreateUploadsFolder(uploadsFolder) {
 
-  console.log(uploadsFolder);
+//   console.log(uploadsFolder);
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+//   if (!fs.existsSync(dir)) {
+//     fs.mkdirSync(dir, { recursive: true });
+//   }
 
-}
+// }
+
 
 // Step 2
-mongoose.connect('mongodb://localhost:27017/stockUpdate2', {
+// mongoose.connect('mongodb://localhost:27017/stockUpdate2', {
+mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -62,15 +68,12 @@ app.use(express.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
-} else {
-  app.use(express.static('client/public')); // lo puse yo
 }
 
 
 // HTTP request logger
 app.use(morgan('tiny'));
 app.use('/api', routes);
-
 
 
 

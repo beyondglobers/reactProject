@@ -12,7 +12,7 @@ const StockManager = () => {
 
 
 
-  if (isAuthenticated && (user.email == 'acpmnew@gmail.com')) {
+  if (isAuthenticated && (user.email == 'beyondglobers@gmail.com')) {
 
 
     return (
@@ -32,7 +32,7 @@ const StockManager = () => {
       </>);
 
   }
-  else if (isAuthenticated && (user.email != 'acpmnew@gmail.com')) {
+  else if (isAuthenticated && (user.email != 'beyondglobers@gmail.com')) {
     console.log(user.email);
     return (
 

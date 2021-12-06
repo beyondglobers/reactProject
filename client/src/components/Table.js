@@ -8,7 +8,7 @@ import { NavLink, useParams } from 'react-router-dom';
 // import Update from './Update';
 // import Add from './Add';
 
-// import RnIncrementDecrementBtn  from  'react-native-increment-decrement-button';
+// import RnIncrementDecrementBtn from 'react-native-increment-decrement-button';
 // import NumericInput from 'react-native-numeric-input';
 
 class Table extends Component {
@@ -19,7 +19,7 @@ class Table extends Component {
     // body: '',
     posts: [],
     dbs: [],
-    value : 0
+    value: 0
 
   };
 
@@ -203,8 +203,9 @@ class Table extends Component {
             {post.name}
           </td>
           <td>
-          {/* <RnIncrementDecrementBtn minVal={0}  max={10000} val={post.amount} />   */}
-          {/* <NumericInput value={this.state.value} onChange={value => this.setState({value})} /> */}
+            {post.amount}
+            {/* <RnIncrementDecrementBtn minVal={0}  max={10000} val={post.amount} />   */}
+            {/* <NumericInput value={this.state.value} onChange={value => this.setState({value})} /> */}
           </td>
           <td>
             {post.ventas}

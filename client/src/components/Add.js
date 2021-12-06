@@ -155,7 +155,7 @@ class Add extends Component {
             {/* // amount */}
             <div className="form-input">
 
-              amount:
+            amount:           
               <div>
                 <input
                   type="text"
@@ -213,7 +213,11 @@ class Add extends Component {
               </div>
             </div>
 
-            <button>Submit</button>
+
+            <br></br>
+              <button>Submit</button>
+
+
           </form>
 
         </div>
