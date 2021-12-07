@@ -1,0 +1,11 @@
+Abrir Carpeta del Proyecto
+Ingresar a cd.. Client y correr npm install
+Regresar a cd.. proyecto y correr npm install
+Iniciar proeycto con npm run dev
+Abrir http://localhost:3000/ en el navegador de su preferencia.
+
+El Menú de Stock se habilita con correo de Administrador:
+beyondglobers@gmail.com
+U4gn7aXi2PmxwTA
+
+Para cargar ítems, coger de la carpeta el Zip y el CSV-Excell llamados Stock1 al 5.
