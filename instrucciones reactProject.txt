@@ -8,4 +8,4 @@ El Menú de Stock se habilita con correo de Administrador:
 beyondglobers@gmail.com
 U4gn7aXi2PmxwTA
 
-Para cargar ítems, coger de la carpeta el Zip y el CSV-Excell llamados Stock1 al 5.
+Para cargar ítems, coger de la carpeta Uploads el Zip y el CSV-Excell llamados Stock1 al 5.
